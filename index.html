@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <title>ChatGPT - Carga de archivo de Word</title>
-
-    <!-- Agregar los enlaces a las bibliotecas necesarias -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css" integrity="sha512-m2q3CqUwUpKz/qfL1sZQqJtb/IboOm+6Tf9ilnBxRZh+wJpwuMAB/wPkgM+uRYDeZ29E7V1G2Q+g78enMMxltg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.js" integrity="sha512-UC3U6zjK6TBlT0T0xRdScBgVJzvCEYap1Us8KjZgmAApZoYYh/cpiWnXcMI1QK3qA3al1mHKWmAPi4tue5m5KQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  </head>
-  <body>
-    <h1>ChatGPT - Carga de archivo de Word</h1>
-
-    <!-- Agregar un formulario que permita la carga de archivos de Word -->
-    <form action="#" class="dropzone" id="my-dropzone">
-      <div class="fallback">
-        <input name="file" type="file" multiple />
-      </div>
-    </form>
-
-    <!-- Agregar un elemento HTML para mostrar la respuesta de ChatGPT -->
-    <div id="output"></div>
-
-    <!-- Agregar un enlace al archivo script.js -->
-    <script src="script.js"></script>
-  </body>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Convertidor de archivos Word a texto con ChatGPT</title>
+  <!-- Importar estilos de Dropzone.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/dropzone.min.css" integrity="sha512-LE34gkDfV7HvXN+AsVonBllcM4pZ0/0jioGN00jj/WTidrjCp+18zhsX9rn+nktn1cqQa+bZsATPcNXaeCwY/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <h1>Convertidor de archivos Word a texto con ChatGPT</h1>
+  <div id="my-dropzone" class="dropzone"></div>
+  <div>
+    <label for="prompt">Por favor ingrese un prompt para enviar a ChatGPT:</label>
+    <input type="text" id="prompt">
+    <button id="submit">Enviar a ChatGPT</button>
+  </div>
+  <div>
+    <h2>Respuesta de ChatGPT:</h2>
+    <p id="output"></p>
+  </div>
+  <!-- Importar librerías necesarias -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/dropzone.min.js" integrity="sha512-Ph7VgJh1uK8NxYbJfN/SCiyyGNYISJn8PZnNtD5KKKBl5g5vo5X9SlSKJAgvA+lyfxkt0pJOM0ZjK1HzwFNVGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
