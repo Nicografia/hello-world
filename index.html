@@ -1,31 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dropzone@5.9.2/dist/min/dropzone.min.css" />
-  <meta charset="utf-8">
-  <title>Convertidor de archivos Word a texto con ChatGPT</title>
-  <!-- Importar estilos de Dropzone.js -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/dropzone.min.css" integrity="sha512-LE34gkDfV7HvXN+AsVonBllcM4pZ0/0jioGN00jj/WTidrjCp+18zhsX9rn+nktn1cqQa+bZsATPcNXaeCwY/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ejemplo de formulario para ChatGPT</title>
 </head>
 <body>
-  <h1>Convertidor de archivos Word a texto con ChatGPT</h1>
-  <div id="my-dropzone" class="dropzone"></div>
-  <div>
-    <label for="file">Seleccione un archivo de Word (.docx):</label>
-    <input type="file" id="file" accept=".docx">
-  </div>
-  <div>
-    <label for="prompt">Por favor ingrese un prompt para enviar a ChatGPT:</label>
-    <input type="text" id="prompt">
-    <button id="submit">Enviar a ChatGPT</button>
-  </div>
-  <div>
-    <h2>Respuesta de ChatGPT:</h2>
-    <p id="output"></p>
-  </div>
-  <!-- Importar librerías necesarias -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.2/dropzone.min.js" integrity="sha512-Ph7VgJh1uK8NxYbJfN/SCiyyGNYISJn8PZnNtD5KKKBl5g5vo5X9SlSKJAgvA+lyfxkt0pJOM0ZjK1HzwFNVGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="script.js"></script>
+    <h1>Generador de respuestas con ChatGPT</h1>
+    <form method="POST" enctype="multipart/form-data" action="/respuesta">
+        <label for="pdf_file">Archivo PDF:</label>
+        <input type="file" id="pdf_file" name="pdf_file"><br><br>
+
+        <label for="v_pregunta">Pregunta:</label>
+        <input type="text" id="v_pregunta" name="v_pregunta"><br><br>
+
+        <input type="submit" value="Generar respuesta">
+    </form>
 </body>
 </html>
